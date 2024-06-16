@@ -24,6 +24,9 @@ let index = {
             const replyId = $(this).data("reply-id");
             index.replyReplySave(replyId);
         });
+        $("#test").on("click", () => { // function(){} 대신 ()=>{}를 사용하는 이유는 this를 바인딩하기 위해서 사용
+			this.test();
+		});
 	},
 
 	save: function() {

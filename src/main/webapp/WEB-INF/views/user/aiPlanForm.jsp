@@ -8,21 +8,9 @@
 		<input type="hidden" id="id" value="${principal.user.id}" />
 		<div class="input-group mb-3 input-group-sm">
 			<div class="input-group-prepend">
-				<span class="input-group-text">출발 장소</span>
+				<span class="input-group-text">목적지</span>
 			</div>
-			<input type="text" id="start" placeholder="장소를 입력하세요" class="form-control">
-		</div>
-		<div class="input-group mb-3 input-group-sm">
-			<div class="input-group-prepend">
-				<span class="input-group-text">목적 장소</span>
-			</div>
-			<input type="text" id="end" placeholder="장소를 입력하세요" class="form-control">
-		</div>
-		<div class="input-group mb-3 input-group-sm">
-			<div class="input-group-prepend">
-				<span class="input-group-text">여행 기간</span>
-			</div>
-			<input type="number" id="days" placeholder="여행 기간을 입력하세요" class="form-control">
+			<input type="text" id="stage_add" placeholder="목적지 장소를 입력해주세요" class="form-control">
 		</div>
 		<div class="text-right">
 			<button type="button" id="btn-write" class="btn btn-dark">작성</button>

@@ -43,6 +43,50 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
+		<!-- springboot에서 python 실행 -->
+		<!-- <dependency>
+			<groupId>org.python</groupId>
+			<artifactId>jython-slim</artifactId>
+			<version>2.7.3</version>
+		</dependency> -->
+
+		<!-- langchain4j
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j</artifactId>
+			<version>0.25.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-open-ai</artifactId>
+			<version>0.25.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-embeddings-all-minilm-l6-v2</artifactId>
+			<version>0.25.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-document-parser-apache-pdfbox</artifactId>
+			<version>0.25.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.10.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-cassandra</artifactId>
+			<version>0.25.0</version>
+		</dependency>
+-->
 
 		<!-- JSTL -->
 		<!-- <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"

@@ -40,15 +40,7 @@ public class Gpt {
 	
 	@NotBlank
 	@Column(nullable = false, length = 50)
-	private String start;
-	
-	@NotBlank
-	@Column(nullable = false, length = 50)
-	private String end;
-	
-	@NotBlank
-	@Column(nullable = false, length = 5)
-	private String days;
+	private String stage;
 	
 	@Column(columnDefinition = "longtext")
 	private String result;

@@ -14,7 +14,7 @@
 		<c:forEach var="gpt" items="${gpts.content}">
 			<tbody>
 				<tr>
-					<td><a href="/user/planDetail/${gpt.id}" style="color: black;">${gpt.start} -> ${gpt.end} (${gpt.days}일)</a></td>
+					<td><a href="/user/planDetail/${gpt.id}" style="color: black;">${gpt.stage}</a></td>
 					<td><a href="/user/planDetail/${gpt.id}" style="color: black;">${fn:substring(gpt.result, 0, 70)}</a></td>
 				</tr>
 			</tbody>

@@ -12,9 +12,7 @@
 	
 	<div>
 		<input type="hidden" id="id" value="${gpt.id}">
-		출발지: <span>${gpt.start}</span><br>
-		목적지: <span>${gpt.end}</span><br>
-		여행 기간: <span>${gpt.days}일</span>
+		목적지: <span>${gpt.stage}</span><br>
 	</div>
 	<br />
 	<hr />

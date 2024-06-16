@@ -92,15 +92,11 @@ let index = {
         }
 		// '작성' 버튼을 비활성화하여 중복 클릭 방지
         $("#btn-write").attr("disabled", true);
-        $("#start").attr("disabled", true);
-        $("#end").attr("disabled", true);
-        $("#days").attr("disabled", true);
+        $("#stage_add").attr("disabled", true);
         $("#btn-plan-next").attr("disabled", false);
-	    alert('여행계획을 작성하고 있습니다.');
+	    alert('계획을 작성하고 있습니다.');
 	    let data = {
-	    	start: $("#start").val(),
-	        end: $("#end").val(),
-	        days: $("#days").val()
+	    		stage: $("#stage_add").val()
 	    };
 
 	        $.ajax({
@@ -112,12 +108,12 @@ let index = {
 	        }).done(function(resp) {
 	        	if(resp.status === 500) {	// globalException에서 에러가 나면 500에러로 던져 줌
 					alert("작성에 실패하였습니다.");
-					location.reload();
+					//location.reload();
 				}else {
-					$("#result").val(resp.plan); // 응답 객체의 plan 속성값을 textarea에 표시
+					$("#result").val(resp.data.plan); // 응답 객체의 plan 속성값을 textarea에 표시
 					alert("작성이 완료되었습니다.");
 				}
-	            //console.log(resp); // 응답을 콘솔에 출력
+	            console.log(resp); // 응답을 콘솔에 출력
 	        }).fail(function(error) {
 	            alert(JSON.stringify(error));
 	            console.error(error); // 에러 상세 정보를 콘솔에 출력
@@ -127,9 +123,7 @@ let index = {
 	planNext: function() {
 	    alert('새로운 여행계획을 작성하고 있습니다.');
 	    let data = {
-	    	start: $("#start").val(),
-	        end: $("#end").val(),
-	        days: $("#days").val()
+	    		stage: $("#stage_add").val()
 	    };
 
 	        $.ajax({
@@ -139,7 +133,7 @@ let index = {
 	            contentType: "application/json; charset=utf-8",
 	            dataType: "json" // 데이터 타입을 JSON으로 설정
 	        }).done(function(resp) {
-					$("#result").val(resp.plan); // 응답 객체의 plan 속성값을 textarea에 표시
+	        		$("#result").val(resp.data.plan);; // 응답 객체의 plan 속성값을 textarea에 표시
 					alert("작성이 완료되었습니다.");
 	        }).fail(function(error) {
 	            alert(JSON.stringify(error));
@@ -150,9 +144,7 @@ let index = {
 	planSave: function() {
 	    alert('계획저장이 완료되었습니다.');
 	    let data = {
-	    	start: $("#start").val(),
-		    end: $("#end").val(),
-		    days: $("#days").val(),
+	    	stage: $("#stage_add").val(),
 	    	result: $("#result").val()
 	    };
 
